@@ -1,4 +1,5 @@
-#####IRAMUTEQ
+#IRAMUTEQ
+##[iramuteq.org](http://iramuteq.org/)
 
 -
 
@@ -7,26 +8,150 @@ et de Questionnaires
 
 -
 
-Un logiciel libre construit avec des logiciels libres
-<br><br>
+Développé par Pierre Ratinaud @ LERASS, Toulouse
+
+-
+
+Un logiciel libre construit avec des logiciels libres (open source)
+
 - Python
 - R
+- Lexique 3 (www.lexique.org)
 
 ===
 
-Input
+##Entrée
+
+Nécessite pré-traitement avant import
+
+-
+
+####Exemple d'entrée :
+
+~~~~
+0001 *an_2000 *sexe_2 *age_6 *cspc_3 *nivet_5 *sympeco_1
+JE CROIS QUE C'EST LE RECHAUFFEMENT DE L'ATMOSPHERE DUE A LA POLLUTION 
+
+0003 *an_2000 *sexe_2 *age_3 *cspc_3 *nivet_3 *sympeco_2
+COUCHE D OZONE POLLUTION 
+
+0005 *an_2000 *sexe_1 *age_2 *cspc_3 *nivet_3 *sympeco_2
+RECHAUFFEMENT DE LA PLANETE 
+
+0006 *an_2000 *sexe_2 *age_4 *cspc_1 *nivet_4 *sympeco_2
+ÇA NE ME DIT RIEN NON 
+
+0007 *an_2000 *sexe_1 *age_5 *cspc_1 *nivet_5 *sympeco_1
+C'EST LE RECHAUFFEMENT DE LA PLANETE DU AU DEVELOPPEMENT DES INDUSTRIES 
+
+[...]
+~~~~
+
+<span style="font-size:0.5em;">(Exemple : enquête ADEME réalisée par Daniel Boy : "pour vous qu'est-ce que l'effet de serre ?")</span>
+
+-
+
+####Format des variables associées au segment de texte :
+
+~~~~
+0003 *an_2000 *sexe_2 *age_3 *cspc_3 *nivet_3 *sympeco_2
+COUCHE D OZONE POLLUTION 
+
+N° de segment *variable1_valeur1 *variable2_valeur2 [...]
+segment de texte
+~~~~
+
+-
+
+####Paramètres d'import de l'exemple
+
+- Langue : français
+- Marqueur de texte = 0000
+- Segment de textes = paragraphes
 
 ===
 
-Statistiques
+##Fonction n°1 : <br> Statistiques
+
+Statistiques textuelles descriptives basiques
+
+-
+
+####Résumé de l'import
+
+- Nombre de textes
+- Nombre d'occurrences
+- Nombre de formes
+- Nombre d'hapax
+- Moyenne d'occurrences par texte
+- Visualisation fréquence/rang : loi de Zipf
+
+-
+
+<div style="text-align: center">
+
+![frequences](images/frequences.jpg)
+
+</div>
+
+Fréquences de termes lemmatisés et catégorisés grammaticalement
 
 ===
 
-Analyse de similitudes
+##Fonction n°2 : <br> Nuage de mots
+
+-
+
+####Paramètres du nuage de mots
+
+- Lemmatisation ou pas
+- Formes actives ou supplémentaires
+- Nombre de formes dans le nuage
+- Taille max et min du texte
+- Liste de mots à inclure dans le nuage
+
+-
+
+<div style="text-align: center; height: 600px">![nuage](images/nuage.png)</div>
 
 ===
 
-Spécificités et AFC
+##Fonction n°3 : <br> Analyse de similitudes
+
+Réseau de cooccurrences de mots
+
+-
+
+####Paramètres de l'analyse de similitudes
+
+- Indice de similitude : __cooccurrences__, Jaccard, Dice, Chi-2 etc...
+- Spacialisation du graphe : random, cercle, __Fruchterman-Reingold__
+- Totalité des liens, limite par noeud ou __arbre maximum__
+- Clustering en communautés : 8 algos dispo (__betweenness__)
+- Liste de mots à inclure dans le graphe
+
+-
+
+<div style="text-align: center; height: 600px">![simi](images/simi.png)</div>
+
+<div style="text-align: center">Export en .graphml pour utilisation dans [gephi](https://gephi.org/)</div>
+
+===
+
+##Fonction n°4 : <br> Spécificités et AFC
+
+Produit une [analyse factorielle des correspondances](https://fr.wikipedia.org/wiki/Analyse_factorielle_des_correspondances) sur un tableau de contingence qui croise formes actives et les variables choisies
+
+-
+
+####Paramètres des spécificités
+
+- Formes actives et/ou supplémentaires
+- Variables ou modalités
+- Indice : hypergéométrique ou chi-2
+- Fréquence minimale des termes considérés
+
+
 
 ===
 
