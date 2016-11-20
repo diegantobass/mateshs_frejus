@@ -12,11 +12,13 @@ Développé par Pierre Ratinaud @ LERASS, Toulouse
 
 -
 
-Un logiciel libre construit avec des logiciels libres (open source)
+Un logiciel libre construit avec des logiciels libres
 
 - Python
 - R
 - Lexique 3 (www.lexique.org)
+
+Open source
 
 ===
 
@@ -151,18 +153,55 @@ Produit une [analyse factorielle des correspondances](https://fr.wikipedia.org/w
 - Indice : hypergéométrique ou chi-2
 - Fréquence minimale des termes considérés
 
+-
 
+<div style="text-align: center; height: 600px">![afcf1](images/afcf_1.jpg)</div>
 
-===
+-
 
-Clustering
-
-===
-
-Sorties
+<div style="text-align: center; height: 600px">![afcf2](images/afcf_2.jpg)</div>
 
 ===
 
-Autres outils d'analyses textuelles
+##Fonction n°5 : <br> Clustering
+
+Cette analyse propose une classification hiérarchique descendante selon la méthode décrite par Reinert
+
+-
+
+####Paramètres de la classification
+- Trois modalités : double RST (Alceste), simple sur segments ou texte
+- Nombre de classes terminales (sur découpage)
+- Nombre de formes (mots) considérées dans le corpus
+- __*MODE PATATE*__ (optimisation pour gros corpus)
+
+-
+
+<div style="text-align: center; height: 600px">![dendrogramme](images/dendrogramme.jpg)</div>
+
+-
+
+<div style="text-align: center; height: 600px">![philogramme](images/philogramme.jpg)</div>
+
+-
+
+<div style="text-align: center; height: 600px">![afcf3](images/afcf_3.jpg)</div>
+
+===
+
+##Sorties
+
+Iramuteq met à disposition de nombreuses sorties en format .csv dans le dossier local correspondant au corpus courant
+
+===
+
+##Autres outils d'analyses textuelles
+
+- TXM : agrège beaucoup des fonctions d'analyse et de statistiques textuelles
+- [CorText](https://managerv2.cortext.net/login) : représentation de réseaux de cooccurrences
+- [Gargantext](http://mines.gargantext.org/) : pluggé sur différentes API telles que wikipédia, europresse ou autres...
+- [Voyant Tools](http://www.voyant-tools.org/) : facile et rapide à prendre en main
+
+===
 
 Merci
