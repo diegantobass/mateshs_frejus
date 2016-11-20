@@ -18,7 +18,7 @@ Un logiciel libre construit avec des logiciels libres
 - R
 - Lexique 3 (www.lexique.org)
 
-Open source
+[Open source](http://www.iramuteq.org/git/iramuteq)
 
 ===
 
@@ -49,7 +49,7 @@ C'EST LE RECHAUFFEMENT DE LA PLANETE DU AU DEVELOPPEMENT DES INDUSTRIES
 [...]
 ~~~~
 
-<span style="font-size:0.5em;">(Exemple : enquête ADEME réalisée par Daniel Boy : "pour vous qu'est-ce que l'effet de serre ?")</span>
+<span style="font-size:0.5em;">(Exemple : résultat d'enquête ADEME réalisée par Daniel Boy)</span>
 
 -
 
@@ -96,7 +96,7 @@ Statistiques textuelles descriptives basiques
 
 </div>
 
-Fréquences de termes lemmatisés et catégorisés grammaticalement
+<div style="text-align: center">Fréquences de termes lemmatisés et catégorisés grammaticalement</div>
 
 ===
 
@@ -106,11 +106,11 @@ Fréquences de termes lemmatisés et catégorisés grammaticalement
 
 ####Paramètres du nuage de mots
 
-- Lemmatisation ou pas
+- Lemmatisation
 - Formes actives ou supplémentaires
-- Nombre de formes dans le nuage
-- Taille max et min du texte
-- Liste de mots à inclure dans le nuage
+- Nombre de mots dans le nuage
+- Taille maximum et minimum des mots
+- Liste des mots à inclure dans le nuage
 
 -
 
@@ -120,7 +120,7 @@ Fréquences de termes lemmatisés et catégorisés grammaticalement
 
 ##Fonction n°3 : <br> Analyse de similitudes
 
-Réseau de cooccurrences de mots
+Réseau de cooccurrences ou de similarités de mots
 
 -
 
@@ -128,9 +128,9 @@ Réseau de cooccurrences de mots
 
 - Indice de similitude : __cooccurrences__, Jaccard, Dice, Chi-2 etc...
 - Spacialisation du graphe : random, cercle, __Fruchterman-Reingold__
-- Totalité des liens, limite par noeud ou __arbre maximum__
+- Totalité des liens, poid minimum des liens ou __arbre maximum__
 - Clustering en communautés : 8 algos dispo (__betweenness__)
-- Liste de mots à inclure dans le graphe
+- Liste des mots à inclure dans le graphe
 
 -
 
@@ -149,8 +149,8 @@ Produit une [analyse factorielle des correspondances](https://fr.wikipedia.org/w
 ####Paramètres des spécificités
 
 - Formes actives et/ou supplémentaires
-- Variables ou modalités
-- Indice : hypergéométrique ou chi-2
+- Variables ou modalités choisies
+- Indice : loi hypergéométrique ou chi-2
 - Fréquence minimale des termes considérés
 
 -
@@ -170,8 +170,8 @@ Cette analyse propose une classification hiérarchique descendante selon la mét
 -
 
 ####Paramètres de la classification
-- Trois modalités : double RST (Alceste), simple sur segments ou texte
-- Nombre de classes terminales (sur découpage)
+- Trois modalités : double sur RST (méthode héritée d'Alceste), simple sur segments ou sur texte
+- Nombre de classes terminales
 - Nombre de formes (mots) considérées dans le corpus
 - __*MODE PATATE*__ (optimisation pour gros corpus)
 
@@ -197,11 +197,13 @@ Iramuteq met à disposition de nombreuses sorties en format .csv dans le dossier
 
 ##Autres outils d'analyses textuelles
 
-- TXM : agrège beaucoup des fonctions d'analyse et de statistiques textuelles
-- [CorText](https://managerv2.cortext.net/login) : représentation de réseaux de cooccurrences
-- [Gargantext](http://mines.gargantext.org/) : pluggé sur différentes API telles que wikipédia, europresse ou autres...
+- [TXM](http://textometrie.ens-lyon.fr/) : agrège beaucoup des fonctions d'analyse et de statistiques textuelles disponibles ailleurs
+- [CorText](https://managerv2.cortext.net/login) : représentation de réseaux de cooccurrences, extraction de concepts saillants
+- [Gargantext](http://mines.gargantext.org/) : directement branché sur les API de sites tels que wikipédia ou europresse et factiva
 - [Voyant Tools](http://www.voyant-tools.org/) : facile et rapide à prendre en main
 
 ===
 
-Merci
+##Merci
+
+Un groupe MATE-SHS s'est formé lors de l'ANF de Fréjus autour des données textuelles - contact : diego.antolinosbasso@sciencespo.fr
